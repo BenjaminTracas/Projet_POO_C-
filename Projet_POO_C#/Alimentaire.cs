@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_POO_C_
+namespace Projet_POO
 {
-    public class Alimentaire
+    public class Alimentaire : Article
     {
-        public string Ingredients { get; set; }
-        public string NutriScore { get; set; }
-        public int Poids { get; set; }
+        protected string Ingredients { get; set; }
+        protected string NutriScore { get; set; }
+        protected string Poids { get; set; }
 
-        public void Toto(string ingredients, string nutriScore, int poids)
+        public Alimentaire(string marque, string nom, int prix, string ingredients, string nutriScore, string poids)
+            : base(marque, nom, prix)
+
         {
             Ingredients = ingredients;
             NutriScore = nutriScore;

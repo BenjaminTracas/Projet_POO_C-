@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_POO_C_
+namespace Projet_POO
 {
-    public class Vetement
+    public class Vetement : Article
     {
-        public string Taille { get; set; }
-        public string Couleur { get; set; }
-        public string Matiere { get; set; }
+        protected string Taille { get; set; }
+        protected string Couleur { get; set; }
+        protected string Matiere { get; set; }
 
-        public Vetement(string taille, string couleur, string matiere)
+        public Vetement(string marque, string nom, int prix, string taille, string couleur, string matiere)
+            : base(marque, nom, prix)
         {
             Taille = taille;
             Couleur = couleur;

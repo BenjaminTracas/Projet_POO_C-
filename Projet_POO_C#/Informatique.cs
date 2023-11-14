@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_POO_C_
+namespace Projet_POO
 {
-    public class Ordinateur
+    public class Ordinateur : Article
     {
-        public string Composants { get; set; }
-        public string Accessoires { get; set; }
-        public string TypeUtilisation { get; set; }
+        protected string Composants { get; set; }
+        protected string Accessoires { get; set; }
+        protected string TypeUtilisation { get; set; }
 
-        public Ordinateur(string compostants, string accessoires, string typeUtilisation)
+        public Ordinateur(string marque, string nom, int prix, string composants, string accessoires, string typeUtilisation)
+            : base(marque, nom, prix)
         {
-            Composants = compostants;
+            Composants = composants;
             Accessoires = accessoires;
             TypeUtilisation = typeUtilisation;
         }
